@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    /* background-color: #313552; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+
+
+li, a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    padding: 0px 20px;
+    display: inline-block;
+}
+
+
+#nav-links{
+    list-style: none;
+}
+
+#nav-links {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+#sidebar {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 7rem 2rem 0 2rem;
+    color: darkgray !important;
+
+}
+
+#upload-data {
+    color: darkgray;
+    width: 100%;
+    line-height: 50px;
+    border-width: 1px;
+    border-style: dashed;
+    border-radius: 5px;
+    border-color: darkgray;
+    text-align: center;
+    padding: 2rem 0;
+
+}
+
+hr{
+    border: 1;
+    height: 5px;
+    width: 50%;
+    position: relative;
+    margin: 30px auto;
+    color: red;
+}
+
+#calcular{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#submit_boton{
+    margin-left: 15px;
+}
+
+#input_nms{
+    -moz-appearance: textfield;
+    padding: 5px;
+    width: auto;
+    
+}
+
+#input_nms::-webkit-outer-spin-button,
+#input_nms::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+nav-bar{
+    color: aquamarine;
+}
+
+#calcular-compo {
+    padding: 7rem 2rem 5rem 2rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+#tabla{
+    padding: 2rem 0 2rem 0;
+}
+
+/* Exportar stilo */
+
+#export-page{
+    padding: 7rem 2rem 5rem 2rem;
+}
+
+#subir-data{
+    width: 100%;
+    line-Height: 60px;
+    border-Width: 1px;
+    border-Style: dashed;
+    border-Radius: 5px;
+    text-Align: center;
+    padding: 2rem 0;
+}
+
+#options{
+    padding-bottom: 2rem;
+}
+
+#descargar{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
