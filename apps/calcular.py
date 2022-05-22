@@ -1,6 +1,6 @@
 from dash import dcc, html
 import dash_bootstrap_components as dbc
-from dash import html, dcc, Output, Input, State, dash_table
+from dash import html, Output, Input, State, dash_table
 from procesamiento import calcularConcentraciones
 
 

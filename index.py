@@ -1,16 +1,9 @@
-import base64
-import io
-import plotly.express as px
-import pandas as pd
-import dash
 import dash_bootstrap_components as dbc
-from dash import html, dcc, Output, Input, State
-import plotly.graph_objects as go
+from dash import html, dcc, Output, Input
 
 # coonect to main.py file
 from app import app
 from app import server
-from procesamiento import *
 
 # connect to your app pages
 from apps import analizar, calcular, exportar
@@ -54,8 +47,10 @@ def page_content(pathname):
     elif pathname == '/apps/exportar':
         return exportar.layout
     else:
-        return analizar.layout
+        return html.Div([
+            "Error 404"
+        ])
 
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server()

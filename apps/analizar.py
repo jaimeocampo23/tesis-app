@@ -1,7 +1,5 @@
 from app import app
 import plotly.express as px
-import pandas as pd
-import dash
 import dash_bootstrap_components as dbc
 from dash import html, dcc, Output, Input, State, callback_context
 import plotly.graph_objects as go
@@ -58,18 +56,15 @@ def parse_contents(contents, filename):
     try:
         if 'csv' in filename:
             # Assume that the user uploaded a CSV file
-            df = pd.read_csv(
+            dframe = pd.read_csv(
                 io.StringIO(decoded.decode('utf-8')))
         elif 'xlsx' in filename:
             # Assume that the user uploaded an excel file
-            df = pd.read_excel(io.BytesIO(decoded))
+            dframe = pd.read_excel(io.BytesIO(decoded))
     except Exception as e:
-        print(e)
-        return html.Div([
-            'There was an error processing this file.'
-        ])
+        return False
 
-    longitud_onda, data = preprocesamiento(df)
+    longitud_onda, data = preprocesamiento(dframe)
     data = procesamiento2(data)
     data, concentraciones = longitud_onda_ordenar(data, longitud_onda)
     y = [data.columns[i] for i in range(1, data.shape[1])]
